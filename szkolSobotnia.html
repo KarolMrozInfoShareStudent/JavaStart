@@ -14,17 +14,22 @@
 
 <script>
 
-var a = 10
+var a = {
+    x:10,
+    y:13,
+    łapy : 4,
+    imie: "kazik"
+}
  
- function kalkulator (x){
+ function kalkulator (object){
 
-     return x*x
+     return object.imie
 
 
  }
 
 
-kalkulator(a)
+console.log(kalkulator(a))
 
 </script>
     
