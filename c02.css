@@ -1,0 +1,14 @@
+body {
+    background-color: grey;
+    background: url(/c02/hobart.jpg) no-repeat center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    font-size: 100%;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    min-height: 100%    
+}
+
+
