@@ -3,7 +3,7 @@ html {
 
 body {
     background-color: #b6a996;
-    background: url('/c02/hobart.jpg') no-repeat center center fixed;
+    background: url('/IMG/hobart.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -37,13 +37,13 @@ h1 {
     height: 112px;
     margin: 0px auto 0px auto;
     padding-top: 40px;
-    background: url('/c02/elderflower-logo.png') no-repeat bottom center;}
+    background: url('/IMG/elderflower-logo.png') no-repeat bottom center;}
 
 h2 {
     width: 286px;
     height: 18px;
     margin: 0px auto 20px auto;
-    background: url('/c02/custom-sign.png') no-repeat center center;}
+    background: url('/IMG/custom-sign.png') no-repeat center center;}
 
 #title {
     font-size: 120%;
