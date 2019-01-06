@@ -6,7 +6,7 @@ var welcome = greeting + name + message;
 
 var sign = 'JANUSZ THE BEST';
 var tiles = sign.length;
-var subTotal = tiles * 9;
+var subTotal = tiles * 10;
 var shipping = 7;
 var grandTotal = subTotal + shipping;
 
