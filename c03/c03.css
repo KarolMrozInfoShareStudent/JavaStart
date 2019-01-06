@@ -89,7 +89,7 @@ a {
     text-decoration:none;}
 
 .true, .false {
-    background: url("../images/tick-cross.png");
+    background: url("/IMG/tick-cross.png");
     display: inline-block;
     float:right;
     height: 25px;
