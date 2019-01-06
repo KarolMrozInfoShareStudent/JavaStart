@@ -44,7 +44,9 @@ h2 {
     height: 18px;
     margin: 0px auto 20px auto;
     background: url('/IMG/custom-sign.png') no-repeat center center;}
-
+h3 {color: rgb(37, 31, 31);
+    font-size: 20px
+    }
 #title {
     font-size: 120%;
     font-weight: bold;}
