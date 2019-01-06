@@ -108,7 +108,7 @@ a {
     min-width: 10em;}
 
 .message span { 
-    font-weight: normal;}
+    font-weight: bold;}
 
 .number {
     text-align: left;}
