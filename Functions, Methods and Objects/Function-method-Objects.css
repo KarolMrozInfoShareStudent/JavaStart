@@ -108,6 +108,16 @@ p + h2 {
   padding: 10px 0;
 }
 
+#hotelName4{
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 120%;
+  margin-top: 10px;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  padding: 10px 0;
+}
+
 
 #rooms {
   font-size: 440%;
@@ -137,3 +147,15 @@ p + h2 {
   border-bottom: 1px solid #fff;
   padding-bottom: 1em;
 }
+
+
+.true, .false {
+  padding: 0 50px 0 50px;
+  line-height: 28px;
+  text-align: left;
+  background-image: url('/IMG/check-cross.png');
+  background-position: 120px 0;
+  background-repeat: no-repeat;}
+
+.false {
+  background-position: 120px -28px;}
