@@ -58,7 +58,7 @@ p + h2 {
   min-height: auto;;
   position: absolute;
   top: 0;
-  right: 15%;
+  right: 50%;
 }
 
 .opis{
@@ -86,6 +86,16 @@ p + h2 {
   padding: 10px 0;
 }
 
+#hotelName3{
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 120%;
+  margin-top: 10px;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  padding: 10px 0;
+}
+
 
 #rooms {
   font-size: 440%;
@@ -94,6 +104,13 @@ p + h2 {
   margin: 0;
 }
 #rooms2 {
+  font-size: 440%;
+  color: #ffb87a;
+  display: inline-block;
+  margin: 0;
+}
+
+#rooms3 {
   font-size: 440%;
   color: #ffb87a;
   display: inline-block;
