@@ -72,6 +72,18 @@ p + h2 {
   top: 0;
   right: 70%;
 }
+#info3 {
+  background-color: #1e1b1e;
+  color: #fff;
+  width: 200px;
+  padding: 0 15px 15px;
+  text-align: center;
+  min-height: auto;;
+  position: absolute;
+  top: 0;
+  right: 5%;
+}
+
 
 .opis{
   color:red
