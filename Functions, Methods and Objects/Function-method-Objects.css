@@ -10,7 +10,6 @@ body {
   background-size: cover;
   margin: 0;
   font-family: "Open Sans", sans-serif;
-
 }
 
 h1 {
@@ -56,7 +55,7 @@ p + h2 {
   width: 200px;
   padding: 0 15px;
   text-align: center;
-  min-height: auto;;
+  min-height: auto;
   position: absolute;
   top: 0;
   right: 35%;
@@ -68,7 +67,7 @@ p + h2 {
   width: 200px;
   padding: 0 15px 15px;
   text-align: center;
-  min-height: auto;;
+  min-height: auto;
   position: absolute;
   top: 0;
   right: 18%;
@@ -79,7 +78,7 @@ p + h2 {
   width: 200px;
   padding: 0 15px 15px;
   text-align: center;
-  min-height: auto;;
+  min-height: auto;
   position: absolute;
   top: 0;
   right: 1%;
@@ -90,7 +89,7 @@ p + h2 {
   width: 200px;
   padding: 0 15px 15px;
   text-align: center;
-  min-height: auto;;
+  min-height: auto;
   position: absolute;
   top: 0;
   right: 50%;
@@ -102,7 +101,7 @@ p + h2 {
   width: 200px;
   padding: 0 15px 15px;
   text-align: center;
-  min-height: auto;;
+  min-height: auto;
   position: absolute;
   top: 0;
   right: 70%;
@@ -115,14 +114,11 @@ p + h2 {
   padding: 0 15px 15px;
   text-align: center;
   min-height: auto;
- 
 }
 
-.opis{
-  color:red
+.opis {
+  color: red;
 }
-
-
 
 #hotelName {
   text-transform: uppercase;
@@ -143,7 +139,7 @@ p + h2 {
   padding: 10px 0;
 }
 
-#hotelName3{
+#hotelName3 {
   text-transform: uppercase;
   text-align: center;
   font-size: 120%;
@@ -153,7 +149,7 @@ p + h2 {
   padding: 10px 0;
 }
 
-#hotelName4{
+#hotelName4 {
   text-transform: uppercase;
   text-align: center;
   font-size: 120%;
@@ -162,7 +158,6 @@ p + h2 {
   border-bottom: 1px solid #fff;
   padding: 10px 0;
 }
-
 
 #rooms {
   font-size: 440%;
@@ -193,25 +188,42 @@ p + h2 {
   padding-bottom: 1em;
 }
 
-
-.true, .false {
+.true,
+.false {
   padding: 0 50px 0 50px;
   line-height: 28px;
   text-align: left;
-  background-image: url('/IMG/check-cross.png');
+  background-image: url("/IMG/check-cross.png");
   background-position: 120px 0;
-  background-repeat: no-repeat;}
+  background-repeat: no-repeat;
+}
 
 .false {
-  background-position: 120px -28px;}
+  background-position: 120px -28px;
+}
 
-  #footer {
-    position: absolute;
-    text-align: center;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #b97b41;}
-  
-  #footer p {
-    margin: 0;}  
+#footer {
+  position: absolute;
+  text-align: center;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #b97b41;
+}
+
+#footer2 {
+  position: absolute;
+  text-align: center;
+  bottom: 0;
+  float: right;
+  width: 10%;
+  background-color: #b97b41;
+}
+
+#footer p {
+  margin: 0;
+}
+
+#footer2 p {
+  margin: 0;
+}
