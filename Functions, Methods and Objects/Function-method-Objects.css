@@ -96,7 +96,17 @@ p + h2 {
   right: 50%;
 }
 
-
+#info5 {
+  background-color: #1e1b1e;
+  color: #fff;
+  width: 200px;
+  padding: 0 15px 15px;
+  text-align: center;
+  min-height: auto;;
+  position: absolute;
+  top: 0;
+  right: 70%;
+}
 .opis{
   color:red
 }
