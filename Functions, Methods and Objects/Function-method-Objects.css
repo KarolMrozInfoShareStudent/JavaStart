@@ -71,7 +71,7 @@ p + h2 {
   min-height: auto;;
   position: absolute;
   top: 0;
-  right: 70%;
+  right: 18%;
 }
 #info3 {
   background-color: #1e1b1e;
@@ -82,7 +82,18 @@ p + h2 {
   min-height: auto;;
   position: absolute;
   top: 0;
-  right: 5%;
+  right: 1%;
+}
+#info4 {
+  background-color: #1e1b1e;
+  color: #fff;
+  width: 200px;
+  padding: 0 15px 15px;
+  text-align: center;
+  min-height: auto;;
+  position: absolute;
+  top: 0;
+  right: 50%;
 }
 
 
