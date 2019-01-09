@@ -90,3 +90,18 @@ h3{
   box-sizing: border-box;
 }
 
+#answer4 {
+  border: 10px double rgb(109, 104, 104);
+  color: #52202f;
+ 
+  padding: 20px;
+
+  margin-top: 100px;
+  margin-left: 20px;
+  width: 50%;
+  
+  text-align: left;
+  box-sizing: border-box;
+}
+
+
