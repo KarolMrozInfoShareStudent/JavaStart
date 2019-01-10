@@ -24,7 +24,7 @@ var msgExampleLoop = '';
 
 
 var elExampleLoop = document.getElementById('blackboard');
-    elExampleLoop.innerHTML = msgExampleLoop;
+    elExampleLoop.innerHTML = '<h3>Przykład decyzje i pętle</h3>' + msgExampleLoop;
 
 
     
