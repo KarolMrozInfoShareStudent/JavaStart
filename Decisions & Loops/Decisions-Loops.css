@@ -176,3 +176,56 @@ h3{
   text-align: left;
   box-sizing: border-box;
 }
+#answer9 {
+  border: 10px double rgb(109, 104, 104);
+  color: #52202f;
+ 
+  padding: 20px;
+
+  margin-top: 10px;
+  margin-left: 20px;
+  width: 50%;
+  
+  text-align: left;
+  box-sizing: border-box;
+}
+#answer9 {
+  border: 10px double rgb(109, 104, 104);
+  color: #52202f;
+ 
+  padding: 20px;
+
+  margin-top: 10px;
+  margin-left: 20px;
+  width: 50%;
+  
+  text-align: left;
+  box-sizing: border-box;
+}
+.anserwerLast {
+  width: 90%;
+  margin-top: 6px;
+  height: 300px auto;
+  box-shadow: 0 8px 6px -6px black;
+  
+  background-color: azure;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 15px
+}
+
+
+#blackboard {
+	background-color: #425a5a;
+	border: 15px solid #523620;
+  border-radius: 20px;
+  padding: 10px;
+  color: wheat;
+  height: 250px;
+  margin-top: 5px;
+	
+
+	width: 250px;
+  text-align: center;
+  box-sizing: border-box;
+}
