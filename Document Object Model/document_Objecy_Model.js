@@ -15,10 +15,20 @@
 
 //Pobranie elementu na podstawie wartości nazwy znacznieka
 
-    var elements = document.getElementsByTagName('li');
+    // var elements = document.getElementsByTagName('li');
         
-        if(elements.length > 1){
-            var el = elements[0];
-                el.className = 'cool'
-        }
-   
+    //     if(elements.length > 1){
+    //         var el = elements[0];
+    //             el.className = 'cool'
+    //     }
+
+
+//Pobranie elementu na podstwie selektorów CSS
+
+//mETODA querySelector() zwraca jedynie pierwsze dopasowanie
+   var el = document.querySelector('li.hot');
+        el.className = 'cool'
+
+    //metoda querySelectorAll() zwraca kolekcje NodeList    
+    var els = document.querySelectorAll('li.hot');
+        els[1].className = 'cool'
