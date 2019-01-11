@@ -36,11 +36,22 @@
 // Iteracja poprzez kolekcje NodeList
 
 
-var hotItems = document.querySelectorAll('li.hot');
+// var hotItems = document.querySelectorAll('li.hot');
 
-    if (hotItems.length > 0){
+//     if (hotItems.length > 0){
         
-        for( i = 0; i<hotItems.length; i++){
-            hotItems[i].className = 'cool'
-        }
-    }
+//         for( i = 0; i<hotItems.length; i++){
+//             hotItems[i].className = 'cool'
+//         }
+//     }
+
+
+
+//Pierwszy i ostatni element potomy
+
+var startItem = document.getElementsByTagName('ul')[0];
+var firstItem = startItem.firstChild;
+var lastItem = startItem.lastChild;
+
+firstItem.setAttribute('class', 'complete');
+lastItem.setAttribute('class', 'cool')
