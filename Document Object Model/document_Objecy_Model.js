@@ -49,9 +49,19 @@
 
 //Pierwszy i ostatni element potomy
 
-var startItem = document.getElementsByTagName('ul')[0];
-var firstItem = startItem.firstChild;
-var lastItem = startItem.lastChild;
+// var startItem = document.getElementsByTagName('ul')[0];
+// var firstItem = startItem.firstChild;
+// var lastItem = startItem.lastChild;
 
-firstItem.setAttribute('class', 'complete');
-lastItem.setAttribute('class', 'cool')
+// firstItem.setAttribute('class', 'complete');
+// lastItem.setAttribute('class', 'cool')
+
+
+//Uzyskanie dostępu do wezła tekstowego i jego zamiana
+
+var itemTwo = document.getElementById('two');
+var elTekst = itemTwo.firstChild.nodeValue;
+
+elTekst = elTekst.replace('pine nuts', 'kaputa');
+
+itemTwo.firstChild.nodeValue = elTekst;
