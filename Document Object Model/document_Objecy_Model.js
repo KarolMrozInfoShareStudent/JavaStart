@@ -25,10 +25,22 @@
 
 //Pobranie elementu na podstwie selektorów CSS
 
-//mETODA querySelector() zwraca jedynie pierwsze dopasowanie
-   var el = document.querySelector('li.hot');
-        el.className = 'cool'
+// //mETODA querySelector() zwraca jedynie pierwsze dopasowanie
+//    var el = document.querySelector('li.hot');
+//         el.className = 'cool'
 
-    //metoda querySelectorAll() zwraca kolekcje NodeList    
-    var els = document.querySelectorAll('li.hot');
-        els[1].className = 'cool'
+//     //metoda querySelectorAll() zwraca kolekcje NodeList    
+//     var els = document.querySelectorAll('li.hot');
+//         els[1].className = 'cool'
+
+// Iteracja poprzez kolekcje NodeList
+
+
+var hotItems = document.querySelectorAll('li.hot');
+
+    if (hotItems.length > 0){
+        
+        for( i = 0; i<hotItems.length; i++){
+            hotItems[i].className = 'cool'
+        }
+    }
