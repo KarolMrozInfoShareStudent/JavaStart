@@ -117,7 +117,40 @@
 //         fourthItem.setAttribute('class', 'cool');
 //         fourthItem.innerHTML = 'tło zmieni sie na błekitne'
 
-var firstItem = document.getElementById('one');
-    if(firstItem.hasAttribute('class')){
-        firstItem.removeAttribute('class');
-    }
+// var firstItem = document.getElementById('one');
+//     if(firstItem.hasAttribute('class')){
+//         firstItem.removeAttribute('class');
+//     }
+
+
+var list = document.getElementsByTagName('ul')[0];
+
+var newItemLast = document.createElement('li');
+var newTextLast = document.createTextNode('krem z pora');
+    newItemLast.appendChild(newTextLast);
+    list.appendChild(newItemLast);
+
+var newfirstItem = document.createElement('li');
+    newTextFitst = document.createTextNode('polski bigos');
+    newfirstItem.appendChild(newTextFitst);
+    
+    list.insertBefore(newfirstItem, list.firstChild);
+
+
+
+
+
+var listItem = document.querySelectorAll('li');
+
+
+    for( i = 0; i<listItem.length; i++){
+        listItem[i].className = 'cool';
+    }   
+
+
+
+var headling = document.querySelector('h2');
+var headlingText = headling.firstChild.nodeValue;
+var totalItems = listItem.length;
+var newHedling = headlingText + '<span>' + totalItems + '</span';
+headling.innerHTML = newHedling
