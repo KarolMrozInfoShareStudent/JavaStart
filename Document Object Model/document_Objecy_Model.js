@@ -86,12 +86,16 @@
 // firstItem.innerHTML = '<a href=\"https://github.com/MrozKarol\">' + itemContent + '</a>'
 
 
-var newEl = document.createElement('li');
-var newText = document.createTextNode('owsianka na mleku');
+// var newEl = document.createElement('li');
+// var newText = document.createTextNode('owsianka na mleku');
 
-newEl.appendChild(newText);
+// newEl.appendChild(newText);
 
-var position = document.getElementsByTagName('ul')[0];
-    position.appendChild(newEl);
+// var position = document.getElementsByTagName('ul')[0];
+//     position.appendChild(newEl);
 
-    
+var removeEl = document.getElementsByTagName('li')[3]
+
+var containerEl = removeEl.parentNode;
+    containerEl.removeChild(removeEl)
+
