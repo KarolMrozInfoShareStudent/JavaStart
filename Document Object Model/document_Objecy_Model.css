@@ -98,8 +98,8 @@ li {
 li a {
   color: #fff;
   text-decoration: none;
-  background-image: url(IMG/icon-link.png);
-  background-position: center, right;
+  background-image: url(/IMG/icon-link.png);
+  background-position: right;
   background-repeat: no-repeat;
   padding-right: 36px;
 }
