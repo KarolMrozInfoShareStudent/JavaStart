@@ -59,9 +59,22 @@
 
 //Uzyskanie dostępu do wezła tekstowego i jego zamiana
 
-var itemTwo = document.getElementById('two');
-var elTekst = itemTwo.firstChild.nodeValue;
+// var itemTwo = document.getElementById('two');
+// var elTekst = itemTwo.firstChild.nodeValue;
 
-elTekst = elTekst.replace('pine nuts', 'kaputa');
+// elTekst = elTekst.replace('pine nuts', 'kapusta');
 
-itemTwo.firstChild.nodeValue = elTekst;
+// itemTwo.firstChild.nodeValue = elTekst;
+
+
+var firstItem = document.getElementById('one');
+var showTextContent = firstItem.textContent;
+var showInnerText = firstItem.innerText;
+
+var msg = '<p>textContent:' + showTextContent + '</p>';
+    msg += '<p>innerText:' +  showInnerText + '</p>';
+
+var el = document.getElementById('scriptResults');
+    el.innerHTML = msg;
+
+    firstItem.textContent = 'chleb ze smalecem'
