@@ -94,8 +94,19 @@
 // var position = document.getElementsByTagName('ul')[0];
 //     position.appendChild(newEl);
 
-var removeEl = document.getElementsByTagName('li')[3]
+// var removeEl = document.getElementsByTagName('li')[3]
 
-var containerEl = removeEl.parentNode;
-    containerEl.removeChild(removeEl)
+// var containerEl = removeEl.parentNode;
+//     containerEl.removeChild(removeEl)
+
+
+var firstItem = document.getElementById('one');
+
+    if (firstItem.hasAttribute('class')){
+        var attr = firstItem.getAttribute('class');
+
+        var el = document.getElementById('scriptResults');
+            el.innerHTML = '<p> Pierwszy element z listy ma klase o nazwie : ' + attr + '</p>'
+    }
+
 
