@@ -100,13 +100,19 @@
 //     containerEl.removeChild(removeEl)
 
 
+// var firstItem = document.getElementById('one');
+
+//     if (firstItem.hasAttribute('class')){
+//         var attr = firstItem.getAttribute('class');
+
+//         var el = document.getElementById('scriptResults');
+//             el.innerHTML = '<p> Pierwszy element z listy ma klase o nazwie : ' + attr + '</p>'
+//     }
+
+
 var firstItem = document.getElementById('one');
+    firstItem.className = 'complete';
 
-    if (firstItem.hasAttribute('class')){
-        var attr = firstItem.getAttribute('class');
-
-        var el = document.getElementById('scriptResults');
-            el.innerHTML = '<p> Pierwszy element z listy ma klase o nazwie : ' + attr + '</p>'
-    }
-
-
+    var fourthItem = document.getElementsByTagName('li')[3];
+        fourthItem.setAttribute('class', 'cool');
+        fourthItem.innerHTML = 'tło zmieni sie na błekitne'
