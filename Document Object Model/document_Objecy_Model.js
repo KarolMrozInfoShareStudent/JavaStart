@@ -80,7 +80,18 @@
 //     firstItem.textContent = 'chleb ze smalecem'
 
 
-var firstItem = document.getElementById('one');
-var itemContent = firstItem.innerHTML;
+// var firstItem = document.getElementById('one');
+// var itemContent = firstItem.innerHTML;
 
-firstItem.innerHTML = '<a href=\"https://github.com/MrozKarol\">' + itemContent + '</a>'         
+// firstItem.innerHTML = '<a href=\"https://github.com/MrozKarol\">' + itemContent + '</a>'
+
+
+var newEl = document.createElement('li');
+var newText = document.createTextNode('owsianka na mleku');
+
+newEl.appendChild(newText);
+
+var position = document.getElementsByTagName('ul')[0];
+    position.appendChild(newEl);
+
+    
