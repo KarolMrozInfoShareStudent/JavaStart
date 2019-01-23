@@ -24,16 +24,35 @@
 //////////////////////////////////////////////////////////////////////////////////////////////// 
 
 //Użycie obserwatora zdarzeń
-function checkUsername(){
-  var elMsg = document.getElementById('feedback');
+// function checkUsername(){
+//   var elMsg = document.getElementById('feedback');
   
-      if(this.value.length < 5){
-        elMsg.textContent = 'Nazwa uzytkownika musu zawierac przynajmniej 5 znaków';
+//       if(this.value.length < 5){
+//         elMsg.textContent = 'Nazwa uzytkownika musu zawierac przynajmniej 5 znaków';
+//       }else{
+//         elMsg.textContent = '';
+//       }
+// }
+
+// var elUserName = document.getElementById('username');
+
+//     elUserName.addEventListener('blur', checkUsername, false)
+///////////////////////////////////////////////////////////////////////////////
+
+var elUserName = document.getElementById('username');
+var elMsg = document.getElementById('feedback');
+
+function checkUsername(minLength){
+  
+      if(elUserName.value.length < minLength){
+        elMsg.textContent = 'Nazwa uzytkownika musu zawierac przynajmniej' + minLength+ 'znaków';
       }else{
         elMsg.textContent = '';
       }
 }
 
-var elUserName = document.getElementById('username');
 
-    elUserName.addEventListener('blur', checkUsername, false)
+    elUserName.addEventListener('blur', function(){
+        checkUsername(4)
+    },false);
+ ///////////////////////////////////////////////////////////////////   
