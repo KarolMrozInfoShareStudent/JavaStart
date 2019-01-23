@@ -4,13 +4,13 @@
 //     if (elUsername.value.length < 5) {
 //       elMsg.textContent = 'Nazwa urzytkownika musi miec prznyjamniej 5 znaków';
 //     } else {
-//       elMsg.textContent = '';                            
+//       elMsg.textContent = '';
 //     }
 //   }
 //////////////////////////////////////////////////////////////////////////////////////////
 // function checkUsername(){
 //   var elMsg = document.getElementById('feedback');
-  
+
 //       if(this.value.length < 5){
 //         elMsg.textContent = 'Nazwa uzytkownika musu zawierac przynajmniej 5 znaków';
 //       }else{
@@ -18,15 +18,14 @@
 //       }
 // }
 
-
 // var elUserName = document.getElementById('username');
 //     elUserName.onblur = checkUsername;
-//////////////////////////////////////////////////////////////////////////////////////////////// 
+////////////////////////////////////////////////////////////////////////////////////////////////
 
 //Użycie obserwatora zdarzeń
 // function checkUsername(){
 //   var elMsg = document.getElementById('feedback');
-  
+
 //       if(this.value.length < 5){
 //         elMsg.textContent = 'Nazwa uzytkownika musu zawierac przynajmniej 5 znaków';
 //       }else{
@@ -43,7 +42,7 @@
 // var elMsg = document.getElementById('feedback');
 
 // function checkUsername(minLength){
-  
+
 //       if(elUserName.value.length < minLength){
 //         elMsg.textContent = 'Nazwa uzytkownika musu zawierac przynajmniej' + minLength+ 'znaków';
 //       }else{
@@ -51,41 +50,59 @@
 //       }
 // }
 
-
 //     elUserName.addEventListener('blur', function(){
 //         checkUsername(4)
 //     },false);
- ///////////////////////////////////////////////////////////////////
- 
- 
- function setup(){
-   var textInput = document.getElementById('username');
+///////////////////////////////////////////////////////////////////
 
-   textInput.focus();
- }
+function setup() {
+  var textInput = document.getElementById("username");
 
- window.addEventListener('load', setup, false)
- ////////////////////////////////////////////////////////////
+  textInput.focus();
+}
 
- function checkUsername(){
-   var username = el.value;
-      if(username.length < 5){
-        elMsg.className = 'warning';
-        elMsg.textContent = 'Nazwa nadal zbyt krótka';
-      }else{
-        elMsg = '';
-      }
- }
+window.addEventListener("load", setup, false);
+////////////////////////////////////////////////////////////
 
- function tipUsername(){
-   elMsg.className = 'tip';
-   elMsg.textContent = 'Nazwa uzytkownika musi miec przynajminej 5 znaków'
- }
+function checkUsername() {
+  var username = el.value;
+  if (username.length < 5) {
+    elMsg.className = "warning";
+    elMsg.textContent = "Nazwa nadal zbyt krótka";
+  } else {
+    elMsg = "";
+  }
+}
 
+function tipUsername() {
+  elMsg.className = "tip";
+  elMsg.textContent = "Nazwa uzytkownika musi miec przynajminej 5 znaków";
+}
 
- var el = document.getElementById('username');
- var elMsg = document.getElementById('feedback')
+var el = document.getElementById("username");
+var elMsg = document.getElementById("feedback");
 
+el.addEventListener("focus", tipUsername, false);
+el.addEventListener("blur", checkUsername, false);
 
- el.addEventListener('focus', tipUsername, false);
- el.addEventListener('blur', checkUsername, false)
+////////////////////////////////////////////////////////////
+
+var msg = '<div class="header"><a id="close" href="#">zamknij X</a></div>';
+    msg += "<div><h2>Konserwacja systemu</h2>";
+    msg += "Miedzy godzinami 3 a 4 nasze serwery beda konserowane JOŁ ";
+    msg += "W tym czasie moga wystapic niewielkie zakłócenia wcdziałniu tej pieknej strony</div>";
+
+let elNote = document.createElement('div');
+    elNote.setAttribute('id', 'note');
+    
+    elNote.innerHTML = msg;
+    document.body.appendChild(elNote);
+
+    function dismissNote(){
+      document.body.removeChild(elNote);
+    }
+
+    
+const elClose = document.getElementById('close');
+      elClose.addEventListener('click', dismissNote, false);    
+
