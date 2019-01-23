@@ -8,7 +8,9 @@ body {
 
 #page {
   background-color: #403c3b;
-  margin: 0 auto 0 auto;}
+  margin: 0 auto 0 auto;
+  box-shadow: 0 8px 6px -6px rgb(233, 230, 230);
+}
 
 
 h1 {
@@ -18,10 +20,11 @@ h1 {
   background-position: center center;
   text-align: center;
   text-indent: -1000%;
-  height: 75px;
+  height: 85px;
   line-height: 75px;
   width: 117px;
   margin: 0 auto 0 auto;
+  margin-top: 2px;
   padding: 30px 10px 20px 10px;}
 
 h2 {
@@ -274,7 +277,7 @@ select, option {
   margin-top: 10px;}
 
 
-/* Membership Options */
+
 #packageHint, #termsHint {
   color: #fff;
   text-shadow: -1px 1px 2px #000;}
@@ -282,14 +285,14 @@ select, option {
 #terms {
   margin-top: 30px;}
 
-/* Mutation */
+
 #list, #list2 {
   margin-bottom: 10px;}
 div.button {
   height: 65px;
   padding-right: 10px;}
 
-/* Example */
+
 a[data-state='stop'] {background-image: url('/IMG/pause.png');}
 a[data-state='record'] {background-image: url('/IMG/record.png');}
 #buttons {
@@ -305,8 +308,6 @@ a[data-state='record'] {background-image: url('/IMG/record.png');}
   white-space: nowrap;
   overflow: hidden;}
 
-
-/* Small screen - acts like the app would */
 @media only screen and (max-width: 500px) {
   body {
     background-color: #403c3b;
