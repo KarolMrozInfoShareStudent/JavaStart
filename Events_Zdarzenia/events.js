@@ -55,4 +55,13 @@ function checkUsername(minLength){
     elUserName.addEventListener('blur', function(){
         checkUsername(4)
     },false);
- ///////////////////////////////////////////////////////////////////   
+ ///////////////////////////////////////////////////////////////////
+ 
+ 
+ function setup(){
+   var textInput = document.getElementById('username');
+
+   textInput.focus();
+ }
+
+ window.addEventListener('load', setup, false)
