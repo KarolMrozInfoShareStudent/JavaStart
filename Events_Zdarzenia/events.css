@@ -176,12 +176,12 @@ select, option {
 
 #feedback, #termsHint {
   color: #fff;
-  background-image: url('../images/warning.png');
+  background-image: url('/IMG/warning.png');
   background-repeat: no-repeat;
   background-position: 2px 14px;
   padding: 10px 0 0 22px;}
 
-#feedback.warning {background-image: url('../images/warning.png');}
+#feedback.warning {background-image: url('/IMG/warning.png');}
 #feedback.tip {background-image: url('../images/tip.png');}
 
 #packageHint {
@@ -294,7 +294,7 @@ div.button {
 
 
 a[data-state='stop'] {background-image: url('/IMG/pause.png');}
-a[data-state='record'] {background-image: url('/IMG/record.png');}
+a[data-state='record'] {background-image: url('/IMG/tip.png');}
 #buttons {
   height: 100px;
   width: 100px;

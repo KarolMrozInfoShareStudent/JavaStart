@@ -39,22 +39,22 @@
 //     elUserName.addEventListener('blur', checkUsername, false)
 ///////////////////////////////////////////////////////////////////////////////
 
-var elUserName = document.getElementById('username');
-var elMsg = document.getElementById('feedback');
+// var elUserName = document.getElementById('username');
+// var elMsg = document.getElementById('feedback');
 
-function checkUsername(minLength){
+// function checkUsername(minLength){
   
-      if(elUserName.value.length < minLength){
-        elMsg.textContent = 'Nazwa uzytkownika musu zawierac przynajmniej' + minLength+ 'znaków';
-      }else{
-        elMsg.textContent = '';
-      }
-}
+//       if(elUserName.value.length < minLength){
+//         elMsg.textContent = 'Nazwa uzytkownika musu zawierac przynajmniej' + minLength+ 'znaków';
+//       }else{
+//         elMsg.textContent = '';
+//       }
+// }
 
 
-    elUserName.addEventListener('blur', function(){
-        checkUsername(4)
-    },false);
+//     elUserName.addEventListener('blur', function(){
+//         checkUsername(4)
+//     },false);
  ///////////////////////////////////////////////////////////////////
  
  
@@ -65,3 +65,27 @@ function checkUsername(minLength){
  }
 
  window.addEventListener('load', setup, false)
+ ////////////////////////////////////////////////////////////
+
+ function checkUsername(){
+   var username = el.value;
+      if(username.length < 5){
+        elMsg.className = 'warning';
+        elMsg.textContent = 'Nazwa nadal zbyt krótka';
+      }else{
+        elMsg = '';
+      }
+ }
+
+ function tipUsername(){
+   elMsg.className = 'tip';
+   elMsg.textContent = 'Nazwa uzytkownika musi miec przynajminej 5 znaków'
+ }
+
+
+ var el = document.getElementById('username');
+ var elMsg = document.getElementById('feedback')
+
+
+ el.addEventListener('focus', tipUsername, false);
+ el.addEventListener('blur', checkUsername, false)
