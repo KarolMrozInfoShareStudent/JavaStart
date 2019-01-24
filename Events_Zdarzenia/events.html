@@ -1,44 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Zdzrzenia</title>
+    <link rel="stylesheet" href="./events.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Zdzrzenia</title>
-  <link rel="stylesheet" href="./events.css" />
-</head>
-
-<body id="body">
+  <body id="body">
     <div id="stats">
-        screenX: <input type="text" id="sx"> 
-        screenY: <input type="text" id="sy"><span class="divider">|</span> 
-        pageX: <input type="text" id="px"> 
-        pageY: <input type="text" id="py"><span class="divider">|</span>
-        clientX: <input type="text" id="cx"> 
-        clientY: <input type="text" id="cy">
-      </div>
-  <div id="page">
-    <h1>Pig dog</h1>
-    <h2>Nowe konto</h2>
-    <form method="post" action="http://www.example.org/register">
+      screenX: <input type="text" id="sx" /> screenY:
+      <input type="text" id="sy" /><span class="divider">|</span> pageX:
+      <input type="text" id="px" /> pageY: <input type="text" id="py" /><span
+        class="divider"
+        >|</span
+      >
+      clientX: <input type="text" id="cx" /> clientY:
+      <input type="text" id="cy" />
+    </div>
+    <div id="page">
+      <h1>Pig dog</h1>
+      <h2>Nowe konto</h2>
+      <form method="post" action="http://www.example.org/register">
+        <label for="username">Nazwa uzytkownika: </label>
+        <input type="text" id="username" />
+        <div id="feedback"></div>
 
-      <label for="username">Nazwa uzytkownika: </label>
-      <input type="text" id="username">
-      <div id="feedback"></div>
+        <label for="password">Podaj hasło: </label>
+        <input type="password" id="password" />
 
-      <label for="password">Podaj hasło: </label>
-      <input type="password" id="password">
+        <input type="submit" value="sign up" />
+      </form>
+    </div>
+    <div id="page2">
+        <h1>Pig dog</h1>
+        <form id="messageForm">
+          <h2>My profile</h2>
+          <textarea id="message"></textarea>
+          <div id="charactersLeft">176</div>
+          <div id="lastKey">Last key in ASCII code: 68</div>
+        </form>
 
-      <input type="submit" value="sign up"> 
-
-    </form>
-
-    
-  </div>
-
-  <script src="./events.js"></script>
-
-</body>
-
+    <script src="./events.js"></script>
+  </body>
 </html>

@@ -64,47 +64,47 @@ function setup() {
 window.addEventListener("load", setup, false);
 ////////////////////////////////////////////////////////////
 
-function checkUsername() {
-  var username = el.value;
-  if (username.length < 5) {
-    elMsg.className = "warning";
-    elMsg.textContent = "Nazwa nadal zbyt krótka";
-  } else {
-    elMsg = "";
-  }
-}
+// function checkUsername() {
+//   var username = el.value;
+//   if (username.length < 5) {
+//     elMsg.className = "warning";
+//     elMsg.textContent = "Nazwa nadal zbyt krótka";
+//   } else {
+//     elMsg = "";
+//   }
+// }
 
-function tipUsername() {
-  elMsg.className = "tip";
-  elMsg.textContent = "Nazwa uzytkownika musi miec przynajminej 5 znaków";
-}
+// function tipUsername() {
+//   elMsg.className = "tip";
+//   elMsg.textContent = "Nazwa uzytkownika musi miec przynajminej 5 znaków";
+// }
 
-var el = document.getElementById("username");
-var elMsg = document.getElementById("feedback");
+// var el = document.getElementById("username");
+// var elMsg = document.getElementById("feedback");
 
-el.addEventListener("focus", tipUsername, false);
-el.addEventListener("blur", checkUsername, false);
+// el.addEventListener("focus", tipUsername, false);
+// el.addEventListener("blur", checkUsername, false);
 
 ////////////////////////////////////////////////////////////
 
-var msg = '<div class="header"><a id="close" href="#">zamknij X</a></div>';
-    msg += "<div><h2>Konserwacja systemu</h2>";
-    msg += "Miedzy godzinami 3 a 4 nasze serwery beda konserowane JOŁ ";
-    msg += "W tym czasie moga wystapic niewielkie zakłócenia wcdziałniu tej pieknej strony</div>";
+// var msg = '<div class="header"><a id="close" href="#">zamknij X</a></div>';
+//     msg += "<div><h2>Konserwacja systemu</h2>";
+//     msg += "Miedzy godzinami 3 a 4 nasze serwery beda konserowane JOŁ ";
+//     msg += "W tym czasie moga wystapic niewielkie zakłócenia wcdziałniu tej pieknej strony</div>";
 
-let elNote = document.createElement('div');
-    elNote.setAttribute('id', 'note');
+// let elNote = document.createElement('div');
+//     elNote.setAttribute('id', 'note');
     
-    elNote.innerHTML = msg;
-    document.body.appendChild(elNote);
+//     elNote.innerHTML = msg;
+//     document.body.appendChild(elNote);
 
-    function dismissNote(){
-      document.body.removeChild(elNote);
-    }
+//     function dismissNote(){
+//       document.body.removeChild(elNote);
+//     }
 
     
-const elClose = document.getElementById('close');
-      elClose.addEventListener('click', dismissNote, false);
+// const elClose = document.getElementById('close');
+//       elClose.addEventListener('click', dismissNote, false);
       
 //////////////////////////////////////////////////////////////////////////////      
 
@@ -126,3 +126,21 @@ function showPosition(event) {
 
 var elPosition = document.getElementById('body')  ;
     elPosition.addEventListener('mousemove', showPosition, false)
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+var elCount;
+
+function charCount(e){
+  var textEntered, charDisplay, counter, lastKey;
+  textEntered = document.getElementById('message').value;
+  charDisplay = document.getElementById('charactersLeft');
+  counter = (200 - (textEntered.length));
+  charDisplay.textContent = counter;
+  lastKey = document.getElementById('lastKey');
+  lastKey.textContent = 'Ostatni klawisz ma kod ASCII:' + e.keyCode;
+}
+
+elCount = document.getElementById('message');
+elCount.addEventListener('keypress', charCount, false)
+
+
