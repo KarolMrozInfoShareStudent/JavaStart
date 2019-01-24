@@ -143,4 +143,31 @@ function charCount(e){
 elCount = document.getElementById('message');
 elCount.addEventListener('keypress', charCount, false)
 
+///////////////////////////////////////////////////////////////////////
+
+
+var elFrom = document.getElementById('formSignup');
+var elSelectPackage = document.getElementById('package');
+var elPackageHint = document.getElementById('packageHint');
+var elTerms = document.getElementById('terms');
+var elTermsHint = document.getElementById('termsHint');
+
+function packageHint(){
+  var pack = this.options[this.selectedIndex].value;
+      if(pack == 'monthly'){
+        elPackageHint.innerHTML = 'Płacąc za rok oszczedzasz 10 zł !';
+      }else{
+        elPackageHint.innerHTML = 'Dobry wybór';
+      }
+}
+
+function checkTerms(event){
+  if (!elTerms.checked){
+    elTermsHint.innerHTML = 'Musisz sie zgodzic z warunkami';
+    event.preventDefault();
+  }
+}
+
+elFrom.addEventListener('submit', checkTerms, false);
+elSelectPackage.addEventListener('change', packageHint, false);
 
