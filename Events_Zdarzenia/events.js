@@ -171,3 +171,27 @@ function checkTerms(event){
 elFrom.addEventListener('submit', checkTerms, false);
 elSelectPackage.addEventListener('change', packageHint, false);
 
+/////////////////////////////////////////////
+var counter;
+var listOne = document.getElementById('list');
+var addLink = document.querySelector('a');
+var counterOne = document.getElementById('counter');
+var listItems;
+
+function addItem(e){
+  e.preventDefault();
+  neEl = document.createElement('li');
+  newText = document.createTextNode('chce jeszcze frytki'); //nowy węzeł tekstowy
+  neEl.appendChild(newText);
+  listOne.appendChild(neEl);
+}
+
+function uptadeCounter() {
+  listItems = listOne.getElementsByTagName('li').length
+  counterOne.innerHTML = listItems
+}
+
+addLink.addEventListener('click', addItem, false);
+listOne.addEventListener('DOMNodeInserted', uptadeCounter, false)
+
+///////////////////////////////////////
