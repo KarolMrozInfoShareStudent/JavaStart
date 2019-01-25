@@ -69,16 +69,25 @@
 
 //------------zmiana reguł css---------
 
-$(function() {
-    var backgroundColor = $('li').css('background-color');
+// $(function() {
+//     var backgroundColor = $('li').css('background-color');
 
-    $('ul').append('<p>Kolor tła ' + backgroundColor + '</p>');
-      $('li').css({
-      'background-color': 'pink',
-      'border': '1px solid #fff',
-      'color': 'red',
-      'text-shadow': 'none',
-      'font-family': 'Georgia',
-      'padding-left': '100px'
-    });
+//     $('ul').append('<p>Kolor tła ' + backgroundColor + '</p>');
+//       $('li').css({
+//       'background-color': 'pink',
+//       'border': '1px solid #fff',
+//       'color': 'red',
+//       'text-shadow': 'none',
+//       'font-family': 'Georgia',
+//       'padding-left': '100px'
+//     });
+// });
+
+
+//---------------,each()--------------
+$(function() {
+  $('li').each(function() {
+    var ids = this.id;
+    $(this).append(' <span class="order">' + ids + '</span>');
+  });
 });
