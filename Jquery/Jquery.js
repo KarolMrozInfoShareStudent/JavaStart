@@ -58,10 +58,27 @@
 
 //--------------praca z atrybutami-----------------
 
-$(function(){
-    $('li#three').removeClass('hot');
-    $('li.hot').addClass('favorite');
-    $('ul').attr('id', 'group')
- 
-})
+// $(function(){
+//     $('li#three').removeClass('hot');
+//     $('li.hot').addClass('favorite');
+//     $('ul').attr('id', 'group')
+//     $("h1#header").click(function(){
+//         $("h1#header").remove()
+//       });
+//     })
 
+//------------zmiana reguł css---------
+
+$(function() {
+    var backgroundColor = $('li').css('background-color');
+
+    $('ul').append('<p>Kolor tła ' + backgroundColor + '</p>');
+      $('li').css({
+      'background-color': 'pink',
+      'border': '1px solid #fff',
+      'color': 'red',
+      'text-shadow': 'none',
+      'font-family': 'Georgia',
+      'padding-left': '100px'
+    });
+});
