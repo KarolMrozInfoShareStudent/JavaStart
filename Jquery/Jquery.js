@@ -36,16 +36,25 @@
 //--------------------------
 
 
+// $(function(){
+//     $('li:contains("orzeszki")').text('mleko migdałowe');
+//     $('li.hot').html(function(){
+//         return '<em>' + $(this).text() + '</em>';
+//         });
+//         $('li#one').remove()
+// });
+
+//--------------------------------------------------
+//----------Dodawanie nowej zawartości--------------
+
 $(function(){
-    $('li:contains("orzeszki")').text('mleko migdałowe');
-    $('li.hot').html(function(){
-        return '<em>' + $(this).text() + '</em>';
-        });
-        $('li#one').remove()
+    $('ul').before( '<p class="notice">Uaktalinono</p>');
+    $('li.hot').prepend('+ ');
+    var $newListItem = $('<li><em>sos sojowy</em></li>');
+    $('li:last').after($newListItem)
+
+
 })
-
-
-
 
 
 
