@@ -16,12 +16,12 @@
 
 // 
 //----------------------------/
-var $listHTML = $('ul').html();
-    $('ul').append($listHTML);
+// var $listHTML = $('ul').html();
+//     $('ul').append($listHTML);
 
 //--------------------------
-
-
+var $listText = $('ul').text();
+    $('ul').append('<p>' + $listText + '</p>')
 
 //--------------------------
 
