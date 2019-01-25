@@ -24,13 +24,14 @@
 //     $('ul').append('<p>' + $listText + '</p>')
 
 //--------------------------
-var $listItemHTML = $('li').html();
-    $('li').append('<i>' + $listItemHTML + '</i>')
+// var $listItemHTML = $('li ').html();
+//     $('li').append('<i>' + $listItemHTML + '</i>')
 
 
 //--------------------------
 
-
+var $listItemText = $('li').text();
+    $('li').append('<i>' + $listItemText+ '</i>')
 
 //--------------------------
 
