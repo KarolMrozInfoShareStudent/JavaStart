@@ -20,11 +20,12 @@
 //     $('ul').append($listHTML);
 
 //--------------------------
-var $listText = $('ul').text();
-    $('ul').append('<p>' + $listText + '</p>')
+// var $listText = $('ul').text();
+//     $('ul').append('<p>' + $listText + '</p>')
 
 //--------------------------
-
+var $listItemHTML = $('li').html();
+    $('li').append('<i>' + $listItemHTML + '</i>')
 
 
 //--------------------------
