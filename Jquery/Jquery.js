@@ -8,6 +8,12 @@
 //----------------------------------------------------------//
 //Pętle
 
-$('li em').addClass('seasonal');
-$('li.hot').addClass('favorite');
+// $('li em').addClass('seasonal');
+// $('li.hot').addClass('favorite');
+
+///----------------------------//
+//Łaczenie metod
+
+$('li [id!="one"]').hide().delay(500).fadeIn(1400);
+
 
