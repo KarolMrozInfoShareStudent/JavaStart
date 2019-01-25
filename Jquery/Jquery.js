@@ -47,14 +47,21 @@
 //--------------------------------------------------
 //----------Dodawanie nowej zawartości--------------
 
+// $(function(){
+//     $('ul').before( '<p class="notice">Uaktalinono</p>');
+//     $('li.hot').prepend('+ ');
+//     var $newListItem = $('<li><em>sos sojowy</em></li>');
+//     $('li:last').after($newListItem)
+
+
+// })
+
+//--------------praca z atrybutami-----------------
+
 $(function(){
-    $('ul').before( '<p class="notice">Uaktalinono</p>');
-    $('li.hot').prepend('+ ');
-    var $newListItem = $('<li><em>sos sojowy</em></li>');
-    $('li:last').after($newListItem)
-
-
+    $('li#three').removeClass('hot');
+    $('li.hot').addClass('favorite');
+    $('ul').attr('id', 'group')
+ 
 })
-
-
 
