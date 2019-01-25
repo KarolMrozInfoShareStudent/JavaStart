@@ -119,13 +119,13 @@ body {
   .complete a {display:block;}
   
   .favorite {
-    background-image: url('../images/icon-heart.png');
+    background-image: url('/IMG/icon-heart.png');
     background-position: right, center;
     background-repeat: no-repeat;}
   
   em.seasonal
    {
-    background-image: url('../images/icon-calendar.png');
+    background-image: url('/IMG/icon-calendar.png');
     background-position: left  center;
     background-repeat: no-repeat;
     padding-left: 30px;}
