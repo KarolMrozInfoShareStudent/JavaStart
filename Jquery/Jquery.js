@@ -30,10 +30,19 @@
 
 //--------------------------
 
-var $listItemText = $('li').text();
-    $('li').append('<i>' + $listItemText+ '</i>')
+// var $listItemText = $('li').text();
+//     $('li').append('<i>' + $listItemText+ '</i>')
 
 //--------------------------
+
+
+$(function(){
+    $('li:contains("orzeszki")').text('mleko migdałowe');
+    $('li.hot').html(function(){
+        return '<em>' + $(this).text() + '</em>';
+        });
+        $('li#one').remove()
+})
 
 
 
