@@ -85,9 +85,26 @@
 
 
 //---------------,each()--------------
-$(function() {
-  $('li').each(function() {
-    var ids = this.id;
-    $(this).append(' <span class="order">' + ids + '</span>');
+// $(function() {
+//   $('li').each(function() {
+//     var ids = this.id;
+//     $(this).append(' <span class="order">' + ids + '</span>');
+//   });
+// });
+//--------------zdarzenia-------------
+$(function(){
+  
+  var ids = '';
+  var $lisItem = $('li');
+
+  $lisItem.on('mouseover click', function(){
+    ids = this.id;
+    $lisItem.children('span').remove()
+    $(this).append('<span class="priority">'+ ' ' + ids +'</span>');
+  });
+
+  $lisItem.on('mouseout', function(){
+    $(this).children('span').remove()
   });
 });
+
