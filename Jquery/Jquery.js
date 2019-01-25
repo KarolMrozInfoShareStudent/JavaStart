@@ -92,19 +92,28 @@
 //   });
 // });
 //--------------zdarzenia-------------
-$(function(){
+// $(function(){
   
-  var ids = '';
-  var $lisItem = $('li');
+//   var ids = '';
+//   var $lisItem = $('li');
 
-  $lisItem.on('mouseover click', function(){
-    ids = this.id;
-    $lisItem.children('span').remove()
-    $(this).append('<span class="priority">'+ ' ' + ids +'</span>');
+//   $lisItem.on('mouseover click', function(){
+//     ids = this.id;
+//     $lisItem.children('span').remove()
+//     $(this).append('<span class="priority">'+ ' ' + ids +'</span>');
+//   });
+
+//   $lisItem.on('mouseout', function(){
+//     $(this).children('span').remove()
+//   });
+// });
+//--------------------uzycue oboktu event-----
+$(function(){
+  $('li').on('click', function(event){
+    $('li span').remove();
+    var date = new Date();
+    date.setTime(event.timeStamp);
+    var clicked = date.toDateString();
+    $(this).append('<span class="date">' + clicked + ' ' + event.type + '</span>')
   });
-
-  $lisItem.on('mouseout', function(){
-    $(this).children('span').remove()
-  });
-});
-
+})
