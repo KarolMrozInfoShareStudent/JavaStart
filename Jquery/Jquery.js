@@ -108,12 +108,28 @@
 //   });
 // });
 //--------------------uzycue oboktu event-----
-$(function(){
-  $('li').on('click', function(event){
-    $('li span').remove();
-    var date = new Date();
-    date.setTime(event.timeStamp);
-    var clicked = date.toDateString();
-    $(this).append('<span class="date">' + clicked + ' ' + event.type + '</span>')
-  });
+// $(function(){
+//   $('li').on('click', function(event){
+//     $('li span').remove();
+//     var date = new Date();
+//     date.setTime(event.timeStamp);
+//     var clicked = date.toDateString();
+//     $(this).append('<span class="date">' + clicked + ' ' + event.type + '</span>')
+//   });
+// })
+
+//------------delegacja zdarzen -----------
+
+$(function() {
+  var listItem, itemStatus, eventType;
+
+  $('ul').on('click mouseover', ':not(#four)', {status: 'imortant'},
+    function(event){
+      listItem = 'Element: ' + event.target.textContent + '<br />';
+      itemStatus = 'Stan:' + event.data.status +  '<br />';
+      eventType = 'Zdarzenie:' + event.type;
+      $('#notes').html(listItem + itemStatus + eventType);
+    }
+  );
+
 })
