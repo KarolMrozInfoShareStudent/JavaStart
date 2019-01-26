@@ -150,11 +150,24 @@
 // $('#notes').remove()
 
 //--------Uzycie animacji-----------
-$(function() {
-  $('p').remove()
-  $('li').on('click', function() {
-    $(this,).animate({ opacity: 0.1, paddingLeft: '80px'}, 800, function() {
-    $(this).remove();
-    });
+// $(function() {
+//   $('p').remove()
+//   $('li').on('click', function() {
+//     $(this,).animate({ opacity: 0.1, paddingLeft: '80px'}, 800, function() {
+//     $(this).remove();
+//     });
+//   });
+// });
+
+//---------Nawigacja-------
+$(function(){
+  var $h2 = $('h2');
+  $('ul').hide();
+  $h2.append('<a class="show">pokaz</a>');
+
+  $h2.on('click', function(){
+    $h2.next('ul').fadeIn(500).children('.hot').addClass('.complete');
+    $h2.find('a').fadeOut();
   });
 });
+
