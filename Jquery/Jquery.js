@@ -134,17 +134,27 @@
 // })
 //-------------------Podstawowe efekty---------
 
+// $(function() {
+
+//   $('h2').hide().slideDown();
+//   var $li = $('li');
+//   $li.hide().each(function(index) {
+//     $(this).delay(700 * index).fadeIn(700);
+//   });
+
+//   $li.on('click', function() {
+//     $(this).fadeOut(700);
+//   });
+
+// });
+// $('#notes').remove()
+
+//--------Uzycie animacji-----------
 $(function() {
-
-  $('h2').hide().slideDown();
-  var $li = $('li');
-  $li.hide().each(function(index) {
-    $(this).delay(700 * index).fadeIn(700);
+  $('p').remove()
+  $('li').on('click', function() {
+    $(this,).animate({ opacity: 0.1, paddingLeft: '80px'}, 800, function() {
+    $(this).remove();
+    });
   });
-
-  $li.on('click', function() {
-    $(this).fadeOut(700);
-  });
-
 });
-$('#notes').remove()
