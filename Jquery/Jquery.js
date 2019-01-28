@@ -194,3 +194,9 @@
  
 //----praca z formularzem sieciowym---
 
+$(function{
+    var $newItemButton = $('#newItemButton');
+    var $newItemFrom = $('#newItemFrom');
+    var $textImput = $('input:text');
+
+})
