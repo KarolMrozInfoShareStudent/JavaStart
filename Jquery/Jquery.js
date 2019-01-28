@@ -160,14 +160,28 @@
 // });
 
 //---------Nawigacja-------
-$(function(){
-  var $h2 = $('h2');
-  $('ul').hide();
-  $h2.append('<a class="show">pokaz</a>');
+// $(function(){
+//   var $h2 = $('h2');
+//   $('ul').hide();
+//   $h2.append('<a class="show">pokaz</a>');
 
-  $h2.on('click', function(){
-    $h2.next('ul').fadeIn(500).children('.hot').addClass('.complete');
-    $h2.find('a').fadeOut();
+//   $h2.on('click', function(){
+//     $h2.next('ul').fadeIn(500).children('.hot').addClass('.complete');
+//     $h2.find('a').fadeOut();
+//   });
+// });
+
+//----Uzycue fultów----
+
+var $lisItem = $('li');
+$lisItem.filter('.hot:last').removeClass('hot');
+$('li:not(.hot)').addClass('cool');
+$lisItem.has('em').addClass('complete');
+
+$lisItem.each(function(){
+  var $this = $(this)
+    if ($this.is('.hot')){
+      $this.prepend('priorytetowe');
+    }
   });
-});
-
+  
