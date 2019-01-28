@@ -196,17 +196,25 @@
 
 $(function(){
     var $newItemButton = $('#newItemButton');
-    var $newItemFrom = $('#newItemFrom');
-    var $textImput = $('input:text');
+    var $newItemForm = $('#newItemForm');
+    var $textInput = $('input:text');
     
     $newItemButton.show();
-    $newItemFrom.hide();
+    $newItemForm.hide();
 
-    $('#showFrom').on('click,', function(){
+    $('#showForm').on('click', function(){
         $newItemButton.hide();
-        $newItemFrom.show();
+        $newItemForm.show();
+    });
+  
+    $newItemForm.on('submit', function(event){
+        event.preventDefault();
+        var newText = $('input:text').val();
+        $('li:last').after('<li>' + newText + '</li>');
+        $newItemForm.hide();
+        $newItemButton.show();
+        $textInput.val('')
     });
 
-    
-
 })
+
