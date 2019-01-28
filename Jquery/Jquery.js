@@ -194,27 +194,37 @@
  
 //----praca z formularzem sieciowym---
 
-$(function(){
-    var $newItemButton = $('#newItemButton');
-    var $newItemForm = $('#newItemForm');
-    var $textInput = $('input:text');
+// $(function(){
+//     var $newItemButton = $('#newItemButton');
+//     var $newItemForm = $('#newItemForm');
+//     var $textInput = $('input:text');
     
-    $newItemButton.show();
-    $newItemForm.hide();
+//     $newItemButton.show();
+//     $newItemForm.hide();
 
-    $('#showForm').on('click', function(){
-        $newItemButton.hide();
-        $newItemForm.show();
-    });
+//     $('#showForm').on('click', function(){
+//         $newItemButton.hide();
+//         $newItemForm.show();
+//     });
   
-    $newItemForm.on('submit', function(event){
-        event.preventDefault();
-        var newText = $('input:text').val();
-        $('li:last').after('<li>' + newText + '</li>');
-        $newItemForm.hide();
-        $newItemButton.show();
-        $textInput.val('')
-    });
+//     $newItemForm.on('submit', function(event){
+//         event.preventDefault();
+//         var newText = $('input:text').val();
+//         $('li:last').after('<li>' + newText + '</li>');
+//         $newItemForm.hide();
+//         $newItemButton.show();
+//         $textInput.val('')
+//     });
 
-})
+// })
+
+//-------- zmiana wymiarów-----
+$(function() {
+    var listHeight = $('#page').height();
+  
+    $('ul').append('<p>Height: ' + listHeight + 'px</p>');
+    $('li').width('50%');
+    $('li#one').width(125);
+    $('li#two').width('75%');
+  });
 
