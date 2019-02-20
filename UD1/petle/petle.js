@@ -9,13 +9,19 @@ var produkty =
     "React",
     "JsX"
 ];
-
-var kursyPtogramowania = document.getElementById("kursyProgramowania").getElementsByTagName("li");
-
-for (var i = 0; i < kursyPtogramowania.length ; i++)
-{   if(i % 2 !==0){
-    kursyPtogramowania[i].innerHTML = "parzysty: " + kursyPtogramowania[i].innerHTML
+person = {
+    imie: "Arek",
+    nazwisko: "Włodarczyk",
+    wiek: "26"
+ };
+ 
+ var kursyProgramowania = document.getElementById("kursyProgramowania").getElementsByTagName("li");
+ 
+ 
+for (var property in kursyProgramowania)
+{
+    if (typeof(kursyProgramowania[property]) !=="object")
+    break;
+    alert(kursyProgramowania[property].innerHTML)
 }
-    else
-    continue
-}
+
