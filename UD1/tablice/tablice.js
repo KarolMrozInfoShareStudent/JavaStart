@@ -6,8 +6,14 @@ var produkty =
     "CSS",
     "Python"
 ];
+
+var tmp= 
+[
+    "Ajxksk",
+    "Placek"
+]
 produkty[produkty.length] = "ostatni"
 var array =document.getElementById("rezultat");
-array.innerHTML = produkty.length;
+array.innerHTML = produkty.concat(tmp);
 array.innerHTML += "<br>------<br>";
 array.innerHTML += produkty
