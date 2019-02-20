@@ -14,6 +14,6 @@ var tmp=
 ]
 produkty[produkty.length] = "ostatni"
 var array =document.getElementById("rezultat");
-array.innerHTML = produkty.push("nowy element")
+array.innerHTML = produkty.shift()
 array.innerHTML += "<br>------<br>";
 array.innerHTML += produkty
