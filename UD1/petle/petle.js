@@ -10,12 +10,12 @@ var produkty =
     "JsX"
 ];
 
-var rezultat = document.getElementById("rezultat");
+var kursyPtogramowania = document.getElementById("kursyProgramowania").getElementsByTagName("li");
 
-
-
-for(var i =0; i < produkty.length; i++)
-{
-    rezultat.innerHTML += produkty[i] + "<br>";
-   
+for (var i = 0; i < kursyPtogramowania.length ; i++)
+{   if(i % 2 !==0){
+    kursyPtogramowania[i].innerHTML = "parzysty: " + kursyPtogramowania[i].innerHTML
+}
+    else
+    continue
 }
