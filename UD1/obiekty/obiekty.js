@@ -16,4 +16,5 @@ var x = new person("Karol", "Mróz", 5);
 var y = new person("Stefan", "Kozaki", "55")
 var z = new person("Joanna", "Dzonski", "30" )
 
-div.innerHTML = x + "<br>" + y + "<br>" + z
+person.prototype.specifiedValue = 12
+div.innerHTML = x.specifiedValue + "<br>" + y + "<br>" + z
