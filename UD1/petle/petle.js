@@ -12,10 +12,10 @@ var produkty =
 
 var rezultat = document.getElementById("rezultat");
 
-var i = 0
 
-while(i < produkty.length)
+
+for(var i =0; i < produkty.length; i++)
 {
     rezultat.innerHTML += produkty[i] + "<br>";
-    i++
+   
 }
