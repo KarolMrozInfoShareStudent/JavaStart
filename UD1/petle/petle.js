@@ -10,3 +10,12 @@ var produkty =
     "JsX"
 ];
 
+var rezultat = document.getElementById("rezultat");
+
+var i = 0
+
+while(i < produkty.length)
+{
+    rezultat.innerHTML += produkty[i] + "<br>";
+    i++
+}
