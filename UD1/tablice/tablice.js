@@ -15,5 +15,5 @@ var tmp=
 produkty[produkty.length] = "ostatni"
 var array =document.getElementById("rezultat");
 array.innerHTML = produkty.sort().reverse()
-array.innerHTML += "<br>------<br>";
+array.innerHTML += "<br>-------<br>";
 array.innerHTML += produkty
