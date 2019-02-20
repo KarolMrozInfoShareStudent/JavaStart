@@ -1,13 +1,18 @@
 
+function plusSize()
+{
+test.className = "plusFont"
+}
+
 
 function minusSize()
 {
-this.className = "minusFont"
+test.className = "minusFont"
 }
 
 function zmienKolor()
 {
-    this.className = "zmienKolorRed";
+    test.className = "zmienKolorRed";
 }
 function zmienKolor2()
 {
@@ -20,14 +25,6 @@ var minus = document.getElementById("minus")
 test.onmouseover = zmienKolor;
 test.onmouseleave = zmienKolor2;
 
-plus.onclick = function(){
-    test.className = "plusFont"
-    console.log(test)
-   
-    
-}
+plus.onclick =plusSize;
 
-minus.onclick = function(){
-    test.className = "minusFont"
-    console.log(test)
-}
+minus.onclick = minusSize;
