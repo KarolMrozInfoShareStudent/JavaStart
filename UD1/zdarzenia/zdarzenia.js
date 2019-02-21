@@ -1,4 +1,4 @@
-
+// addEventListener
 function plusSize()
 {
 test.className = "plusFont"
@@ -22,9 +22,10 @@ function zmienKolor2()
 var test = document.getElementById("test");
 var plus = document.getElementById("plus")
 var minus = document.getElementById("minus")
-test.onmouseover = zmienKolor;
-test.onmouseleave = zmienKolor2;
+test.addEventListener('mouseover', zmienKolor)
+test.addEventListener('mouseout', zmienKolor2)
 
-plus.onclick =plusSize;
+plus.addEventListener('click', plusSize)
 
-minus.onclick = minusSize;
+minus.addEventListener('click', minusSize)
+
