@@ -1,33 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-        .zmienKolorRed{
-            color:red
+        #tooltip {
+            display: none;
+            background-color: rgb(212, 87, 87);
+            position: absolute;
+            width: 150px;
+            height: 50px;
         }
-        .zmienKolorGreen{
-            color: green
-        }
-        button{
-            cursor: pointer
-        }
-        .plusFont{
-            font-size: 20px
-        }
-        .minusFont{
-            font-size: 10px        }
     </style>
 </head>
 
 <body>
     <div id="test">Tekst do wyswietlenia</div>
-    <button type="button" id="plus">+ powieksz font</button>
-    <button type="button" id="minus">- zmniejsz font</button>
+    <div id="tmp"></div>
+    <div id="tooltip"></div>
 
     <script src="./zdarzenia.js"></script>
 </body>
+
 </html>
