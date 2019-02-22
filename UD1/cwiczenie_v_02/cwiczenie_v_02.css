@@ -1,7 +1,8 @@
 img{
     width: 200px;
-    -webkit-transition:all 66s;;
-    transition: all 66s;
+    -webkit-transition:all 50s;;
+    transition: all 50s;
+    position: absolute
     
 }
 
