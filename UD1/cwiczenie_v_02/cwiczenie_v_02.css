@@ -1,0 +1,11 @@
+img{
+    width: 200px;
+    -webkit-transition:all 66s;;
+    transition: all 66s;
+    
+}
+
+img:hover{
+    -webkit-transform: rotate(280deg);
+    transform: rotate(280deg);
+}
