@@ -1,6 +1,7 @@
 #topButton{
+    display:none;
     background-color: red;
-    width: 50px;
+    width: 80px;
     height: 40px;
     padding: 20px;
     text-align: center;
@@ -10,8 +11,7 @@
     border: 2px solid black;
     border-radius: 5px;
     cursor: pointer;
-    display: flex;
-    flex-direction:column
+    
 }
 
 #topButton:hover{
