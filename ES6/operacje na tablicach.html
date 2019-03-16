@@ -8,6 +8,8 @@
     <title>operacje na tablicach</title>
 </head>
 <div id="fireEach"></div>
+<div>Uzycie map</div>
+<div id="map"></div>
 
 <body>
     <script>
@@ -19,9 +21,14 @@
             'Wodor'
         ];
 
-        playList.forEach((pierwiastek, index)=> console.log(index+ " " + pierwiastek))
-        playList.forEach((pierwiastek, index)=> document.getElementById('fireEach').textContent+= (index+ " " + pierwiastek + " "))
-      
+        playList.forEach((pierwiastek, index)=> console.log(index+ " " + pierwiastek));
+        playList.forEach((pierwiastek, index)=> document.getElementById('fireEach').textContent+= (index+ " " + pierwiastek + " "));
+
+
+        let lowerRoots = playList.map((pierwiastki, index)=> pierwiastki.toLowerCase());
+        console.log(lowerRoots);
+        
+        lowerRoots = playList.map((pierwiastki, index)=> document.getElementById('map').innerHTML+= ' ' + index+' ' + pierwiastki.toLowerCase());
         
     </script>
 </body>
