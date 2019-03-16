@@ -9,23 +9,22 @@
 <body>
   <div id="play">play</div> 
   <script>
-      var playList = ['Black Mamba',
+      let playList = ['Black Mamba',
                       'Organki Mateusza',
                       'Piesni Zakazane',
                       'Polskie przeboje'
                      ]
-      var currentTruck = playList[0];
+      let currentTruck = playList[0];
 
-      (function ()
-      {
-        var el = document.querySelector("#play");
-          for ( var i = 0; i < playList.length; i++)
+      
+        let el = document.querySelector("#play");
+          for ( let i = 0; i < playList.length; i++)
           {
-              var currentTruck = playList[i];
+              let currentTruck = playList[i];
               console.log(currentTruck);
               el.innerHTML = currentTruck
           }
-      }());
+      
       
                   
   </script> 
