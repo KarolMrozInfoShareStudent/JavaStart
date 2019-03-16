@@ -7,6 +7,27 @@
     <title>lest const</title>
 </head>
 <body>
-  <div id="play">play</div>  
+  <div id="play">play</div> 
+  <script>
+      var playList = ['Black Mamba',
+                      'Organki Mateusza',
+                      'Piesni Zakazane',
+                      'Polskie przeboje'
+                     ]
+      var currentTruck = playList[0];
+
+      (function ()
+      {
+        var el = document.querySelector("#play");
+          for ( var i = 0; i < playList.length; i++)
+          {
+              var currentTruck = playList[i];
+              console.log(currentTruck);
+              el.innerHTML = currentTruck
+          }
+      }());
+      
+                  
+  </script> 
 </body>
 </html>
