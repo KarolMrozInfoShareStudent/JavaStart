@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>operacje na tablicach</title>
+</head>
+<div id="fireEach"></div>
+
+<body>
+    <script>
+        let playList = [
+            'Hydrogen',
+            'Helium',
+            'Lithium',
+            'Beryllium',
+            'Wodor'
+        ];
+
+        playList.forEach((pierwiastek, index)=> console.log(index+ " " + pierwiastek))
+        playList.forEach((pierwiastek, index)=> document.getElementById('fireEach').textContent+= (index+ " " + pierwiastek + " "))
+      
+        
+    </script>
+</body>
+
+</html>
