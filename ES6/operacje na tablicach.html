@@ -13,6 +13,8 @@
 
 <p>Uzycue filter "rozni sie od map tym ze colback zwraca true lub false jezeli jest true to element zostanie uwzgledniony w nowej tablicy</p>
 <div id="filter"></div>
+<p>Reduce sluzy do sprowadzenia wartosci do pojedynczej wartosci, w tym przypadku suma liter w tablicy</p>
+<div id="reduce"></div>
 
 <body>
     <script>
@@ -35,6 +37,10 @@
 
         let filtredList = playList.filter((pierwiastki, indeks)=> indeks < 3);
         document.getElementById("filter").innerHTML = filtredList
+
+        let sumaLiter = playList.reduce((suma, pierwiastki)=> suma += pierwiastki.length , 0);
+        document.getElementById('reduce').innerHTML = sumaLiter
+        console.log(sumaLiter)
     </script>
 </body>
 
