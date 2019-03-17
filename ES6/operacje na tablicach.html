@@ -11,6 +11,9 @@
 <div>Uzycie map</div>
 <div id="map"></div>
 
+<p>Uzycue filter "rozni sie od map tym ze colback zwraca true lub false jezeli jest true to element zostanie uwzgledniony w nowej tablicy</p>
+<div id="filter"></div>
+
 <body>
     <script>
         let playList = [
@@ -29,7 +32,9 @@
         console.log(lowerRoots);
         
         lowerRoots = playList.map((pierwiastki, index)=> document.getElementById('map').innerHTML+= ' ' + index+' ' + pierwiastki.toLowerCase());
-        
+
+        let filtredList = playList.filter((pierwiastki, indeks)=> indeks < 3);
+        document.getElementById("filter").innerHTML = filtredList
     </script>
 </body>
 
