@@ -34,6 +34,11 @@
         let numebers = [3, 5 ,77 , 88, 86, 50];
         let minValue = Math.max(...numebers)
         console.log(minValue)
+        let sumNumbers = numebers.reduce((value , suma)=> suma += value, 0);
+        console.log(sumNumbers)
+
+        let addOne = numebers.map((value)=> value + 1)
+        console.log(addOne)
     </script>
 
 </body>
