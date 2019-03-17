@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Operator Rest i Spread</title>
+</head>
+
+<body>
+    <div id="rest"></div>
+    <script>
+        let movies = {
+            'muzykaWyjca': {
+                title: 'Janko muzyknt i Zosia samosia',
+                cast: []
+            },
+            'blaszanyDomek':{
+                title: 'Miasto zlomu',
+                cast: []
+            }
+        };
+        // ... operator rest
+        function setCast(name, ...actors)
+        {
+            actors.forEach((actor)=> movies[name].cast.push(actor));
+        }
+
+        setCast('muzykaWyjca', 'Jan Jakitam', 'Cezary P', 'Johny Dee');
+        setCast('blaszanyDomek', 'Jurand Z', 'Karol M', 'Barbara W')
+        console.log(movies)
+        let rest = document.getElementById('rest');
+        rest.textContent = movies.muzykaWyjca.title + ' '+  movies.muzykaWyjca.cast
+    </script>
+
+</body>
+
+</html>
