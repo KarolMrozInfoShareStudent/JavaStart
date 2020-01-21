@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Zadanie </title>
+    <style>
+        button {
+            display: block;
+            margin: 10px auto;
+        }
+
+        div {
+            background-color: black;
+            width: 80px;
+            height: 80px;
+            color: bisque;
+            text-align: center;
+            line-height: 80px;
+            margin: 5px;
+            float: left;
+        }
+
+        .circle {
+            background-color: antiquewhite;
+            border-radius: 50%;
+            color: black;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <button>KLIKNIJ</button>
+
+    <script>
+        const btn = document.querySelector('button')
+        let number = 1;
+        const addElement = () => {
+            const newDiv = document.createElement('div');
+            newDiv.textContent = number;
+            document.body.appendChild(newDiv);
+            number = number + 1
+        }
+
+        btn.addEventListener('click', addElement)
+    </script>
+</body>
+
+</html>
