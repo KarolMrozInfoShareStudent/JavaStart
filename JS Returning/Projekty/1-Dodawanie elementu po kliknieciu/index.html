@@ -38,11 +38,17 @@
     <script>
         const btn = document.querySelector('button')
         let number = 1;
+        activeNumber = 1
         const addElement = () => {
             const newDiv = document.createElement('div');
             newDiv.textContent = number;
+            if (activeNumber === 5) {
+                activeNumber = 0
+                newDiv.classList.add('circle')
+            }
             document.body.appendChild(newDiv);
-            number = number + 1
+            number++
+            activeNumber++
         }
 
         btn.addEventListener('click', addElement)
