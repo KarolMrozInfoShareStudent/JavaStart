@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>exercise</title>
+    <style>
+        button {
+            display: block;
+            margin: 10px auto;
+            font-size: 30px;
+        }
+        .big {
+            font-weight: bold;
+            font-size: larger
+        }
+    </style>
+</head>
+
+<body>
+
+    <button>CLICK</button>
+    <ul></ul>
+
+    <script>
+        const btn = document.querySelector('button')
+        const ulElement = document.querySelector('ul')
+        let number = 1
+        const addNumber = () => {
+            const newLi = document.createElement('li')
+            newLi.textContent = number
+            if (number % 3 == 0) {
+                newLi.classList.add('big')
+            }
+
+            ulElement.appendChild(newLi)
+            number = number + 2
+        }
+        btn.addEventListener('click', addNumber)
+    </script>
+</body>
+
+</html>
