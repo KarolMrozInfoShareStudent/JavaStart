@@ -36,21 +36,25 @@
     <button>KLIKNIJ</button>
 
     <script>
+        //pobranie zawartości przycisku
         const btn = document.querySelector('button')
         let number = 1;
         activeNumber = 1
         const addElement = () => {
+            //nowy div
             const newDiv = document.createElement('div');
             newDiv.textContent = number;
+            //jezeli numer diva jest podzielny przez 5 to dodaja clase circle
             if (activeNumber === 5) {
                 activeNumber = 0
                 newDiv.classList.add('circle')
             }
+            //przypiecie nowego diva do body
             document.body.appendChild(newDiv);
             number++
             activeNumber++
         }
-
+        //ustawienie przycisku na zdarzenie click i funkcę addElement
         btn.addEventListener('click', addElement)
     </script>
 </body>
