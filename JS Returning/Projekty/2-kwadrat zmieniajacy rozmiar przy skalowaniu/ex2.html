@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>belka</title>
+    <style>
+        body {
+            height: 10000px;
+        }
+
+        div {
+            position: fixed;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <script>
+        const belt = document.createElement('div');
+        document.body.appendChild(belt);
+
+        let size = 0
+        let grow = true
+        belt.style.height = `${size}px`;
+
+        const changeSize = () => {
+            if (size >= window.innerHeight / 2) {
+                grow = !grow
+                console.log(grow)
+            } else if (size === 0) {
+                grow = true
+                console.log(grow)
+            }
+
+            if (grow === true) {
+                size++;
+                belt.style.background = `green`;
+                belt.style.height = `${size}px`;
+            } else {
+                size--
+                belt.style.background = `red`;
+                belt.style.height = `${size}px`;
+            }
+        }
+
+        window.addEventListener('scroll', changeSize)
+    </script>
+</body>
+
+</html>
