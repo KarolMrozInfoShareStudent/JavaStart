@@ -21,20 +21,26 @@
 <body>
 
     <script>
+        //dodanie elementu belt
         const belt = document.createElement('div');
-        document.body.appendChild(belt);
+        document.body.appendChild(belt); //przypiecie elementu belt do body
 
-        let size = 0
-        let grow = true
-        belt.style.height = `${size}px`;
+        let size = 0 //zmienna rozmiaru
+        let grow = true //flaga powiekszania lub zmniejszania
+        belt.style.height = `${size}px`; //ustalenie wysokości belt
+        belt.style.top = 10
 
         const changeSize = () => {
+            //jezeli rozmiar wysokości jest wiekszy niż połowa wysokości ekranu
+            //to przestaw flagę na false i zmniejszaj
             if (size >= window.innerHeight / 2) {
                 grow = !grow
-                console.log(grow)
-            } else if (size === 0) {
+                //console.log(grow)
+                //jezeli rozmiar wysokości jest mniejszy równy zero
+                //to przestaw flagę na true i powiekszaj
+            } else if (size <= 0) {
                 grow = true
-                console.log(grow)
+                //console.log(grow)
             }
 
             if (grow === true) {
