@@ -9,10 +9,16 @@ const liItems = document.querySelectorAll('li')
 const changeSize = () => {
     ulElement.style.display = 'block';
     size++
-    for (let i = 0; i < liItems.length; i++) {
-        liItems[i].textContent = `element ${i+1}`
-        liItems[i].style.fontSize = `${size}px`
-    }
+    // for (let i = 0; i < liItems.length; i++) {
+    //     liItems[i].textContent = `element ${i+1}`
+    //     liItems[i].style.fontSize = `${size}px`
+    // }
+    liItems.forEach((item, index) =>{
+        item.textContent = `element ${index +1}`
+        item.style.fontSize = `${size}px`
+        
+    })
+    
 
 }
 
