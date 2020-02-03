@@ -3,11 +3,22 @@
 
 const input = document.querySelector("input");
 const passwords = ['jedEN', 'DwA'];
-const messages = ["super", "działa!"]
+const messages = ["super", "działa!"];
+const div = document.querySelector('.message')
+
 
 const showMessage = (e) => {
-    //tutaj rozwiązanie
-    // PS. nie skupiaj się na niczym innym w zadaniu niż porównanie i wyświetlenie ( nie rób czyszczenia inputa itp. nie są potrzebne, chyba że masz ochotę)
+    div.textContent = ''
+    const text = e.target.value;
+    // console.log(text)
+    const passwordsLower = passwords.map(item => (
+        item.toLowerCase()
+    ))
+    passwordsLower.forEach((password, index) => {
+        if (password === text.toLowerCase()) {
+            div.textContent = messages[index]
+        }
+    })
 }
 
 input.addEventListener("input", showMessage)
