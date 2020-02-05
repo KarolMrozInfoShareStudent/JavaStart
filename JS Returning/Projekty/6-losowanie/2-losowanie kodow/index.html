@@ -1,14 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Losowanie Kodów</title>
+    <style>
+        button {
+            display: block;
+            margin: 0 auto;
+            background-image: linear-gradient(to right, #2b5876 0%, #4e4376 51%, #2b5876 100%)
+        }
+
+        .btn-grad:hover {
+            background-position: right center;
+        }
+
+        section {
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 10px;
+        }
+    </style>
 </head>
+
 <body>
- <button>Generuj 1000 kodów</button>
- <section></section>  
- <script src="main.js"></script> 
+    <button>Generuj 1000 kodów</button>
+    <section></section>
+    <script src="main.js"></script>
 </body>
+
 </html>
