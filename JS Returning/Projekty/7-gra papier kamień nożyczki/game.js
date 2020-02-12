@@ -37,7 +37,17 @@ const checkResult = (player, ai) => {
         return 'loss'
     }
 }
+//Publikacja wyników
+const publishResult = (player, ai, result) =>{
+    document.querySelector('[data-summary="your-choice"]').textContent= player;
+    document.querySelector('[data-summary="ai-choice"]').textContent= ai;
+    
+    document.querySelector('p.numbers span').textContent = ++gameSummary.number
 
+    
+
+
+}
 //FUNKCJA STERUJĄCA
 const startGame = () => {
     if (!game.playerHand) {
@@ -46,7 +56,8 @@ const startGame = () => {
     game.aiHand = aiChoice();
 
     const gemeResult = checkResult(game.playerHand, game.aiHand);
-    console.log(gemeResult)
+    console.log(gemeResult);
+    publishResult(game.playerHand,game.aiHand,gemeResult)
 }
 
 
