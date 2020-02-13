@@ -33,19 +33,25 @@ const checkResult = (player, ai) => {
         return 'draw'
     } else if ((player === 'papier' && ai === 'kamień') || (player === 'kamień' && ai === 'nożyczki') || (player === 'nożyczki' && ai === 'papier')) {
         return 'win'
-    }else{
+    } else {
         return 'loss'
     }
 }
 //Publikacja wyników
-const publishResult = (player, ai, result) =>{
-    document.querySelector('[data-summary="your-choice"]').textContent= player;
-    document.querySelector('[data-summary="ai-choice"]').textContent= ai;
-    
-    document.querySelector('p.numbers span').textContent = ++gameSummary.number
-
-    
-
+const publishResult = (player, ai, result) => {
+    document.querySelector('[data-summary="your-choice"]').textContent = player;
+    document.querySelector('[data-summary="ai-choice"]').textContent = ai;
+    document.querySelector('p.numbers span').textContent = ++gameSummary.number;
+    if (result === 'win') {
+        document.querySelector('p.wins span').textContent = ++gameSummary.wins;
+        document.querySelector('[data-summary="who-win"]').textContent = 'wygrałeś !!!'
+    } else if (result === 'loss') {
+        document.querySelector('p.losses span').textContent = ++gameSummary.losses;
+        document.querySelector('[data-summary="who-win"]').textContent = 'przegrałeś'
+    } else {
+        document.querySelector('p.draws span').textContent = ++gameSummary.draws;
+        document.querySelector('[data-summary="who-win"]').textContent = 'remis :)'
+    }
 
 }
 //FUNKCJA STERUJĄCA
@@ -57,7 +63,7 @@ const startGame = () => {
 
     const gemeResult = checkResult(game.playerHand, game.aiHand);
     console.log(gemeResult);
-    publishResult(game.playerHand,game.aiHand,gemeResult)
+    publishResult(game.playerHand, game.aiHand, gemeResult)
 }
 
 
