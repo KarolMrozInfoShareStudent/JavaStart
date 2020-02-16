@@ -21,13 +21,13 @@ const handSelection = (e) => {
     e.target.style.boxShadow = '0 0 0 4px yellow'
     // console.log(game.playerHand)
 }
-
+//wybór komputera
 const aiChoice = () => {
     const aiHand = hands[Math.floor(Math.random() * 3)].dataset.option;
     //  console.log(aiHand)
     return aiHand;
 }
-
+//sprawdzenie wyniku
 const checkResult = (player, ai) => {
     if (player === ai) {
         return 'draw'
@@ -54,9 +54,10 @@ const publishResult = (player, ai, result) => {
     }
 
 }
-
+//resetowanie wyboru gracza
 const endGame = () => {
     document.querySelector(`[data-option="${game.playerHand}"]`).style.boxShadow = '';
+    game.playerHand = ''
 
 }
 //FUNKCJA STERUJĄCA
