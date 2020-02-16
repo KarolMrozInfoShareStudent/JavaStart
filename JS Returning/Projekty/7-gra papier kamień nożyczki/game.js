@@ -54,6 +54,11 @@ const publishResult = (player, ai, result) => {
     }
 
 }
+
+const endGame = () => {
+    document.querySelector(`[data-option="${game.playerHand}"]`).style.boxShadow = '';
+
+}
 //FUNKCJA STERUJĄCA
 const startGame = () => {
     if (!game.playerHand) {
@@ -63,7 +68,8 @@ const startGame = () => {
 
     const gemeResult = checkResult(game.playerHand, game.aiHand);
     console.log(gemeResult);
-    publishResult(game.playerHand, game.aiHand, gemeResult)
+    publishResult(game.playerHand, game.aiHand, gemeResult);
+    endGame()
 }
 
 
