@@ -12,11 +12,19 @@
             margin: 0 auto;
             max-width: 80%;
         }
+        .cursor{
+            opacity: 0;
+            transition: .2s;
+        }
+
+        .cursor.active{
+            opacity: 1;
+        }
     </style>
 </head>
 
 <body>
-    <div><span></span></div>
+    <div><span></span><span class="cursor">|</span></div>
     <script src="main.js"></script>
 </body>
 
