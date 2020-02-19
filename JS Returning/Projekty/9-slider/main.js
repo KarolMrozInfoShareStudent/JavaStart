@@ -25,6 +25,8 @@ const changeDot = () => {
     dots[active].classList.add('active')
 }
 
+
+
 const changeSlide = () => {
     active++;
     if (active === slideList.length) {
@@ -34,9 +36,31 @@ const changeSlide = () => {
     h1.textContent = slideList[active].text;
     //Zmiana kropek
     changeDot()
+
 }
 
-setInterval(changeSlide, time)
+
+const keyChangeSlide = (e) => {
+    if (e.keyCode === 37 || e.keyCode === 39) {
+        clearInterval(trol)
+        e.keyCode == 37 ? active-- : active++
+    }
+    if (active === slideList.length) {
+        active = 0
+    } else if (active < 0) {
+        active = slideList.length - 1
+    }
+    img.src = slideList[active].img;
+    h1.textContent = slideList[active].text;
+    //Zmiana kropek
+    changeDot()
+    trol = setInterval(changeSlide, time)
+    console.log(active)
+}
+
+let trol = setInterval(changeSlide, time);
+
+window.addEventListener('keydown', keyChangeSlide)
 
 
 
