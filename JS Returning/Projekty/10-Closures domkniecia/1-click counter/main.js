@@ -1,8 +1,13 @@
-let number = 0;
 
-add =() => {
-    number++
-    document.body.textContent = `aktualny stan licnzika kliknięć to ${number}`
+
+const add = (start = 0) => {
+    let number = start;
+    
+    return () =>{
+        number++;
+        document.body.textContent = `aktualny stan licnzika kliknięć to ${number}`
+    }
+    
 }
-
-document.addEventListener('click',add)
+const counter = add()
+document.addEventListener('click', counter)
