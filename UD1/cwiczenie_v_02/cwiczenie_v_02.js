@@ -1,21 +1,13 @@
-window.onload = function()
-{
-        var moveTarcza = document.getElementById("tarcza");
+window.onload = () => {
+    const moveTarcza = document.getElementById("tarcza");
+    moveTarcza.onmousemove = (e) => {
+        e.target.style.left = e.clientX - e.target.width / 2 + "px";
+        e.target.style.top = e.clientY - e.target.width / 2 + "px"
+    };
 
-        moveTarcza.onmousemove = function(event)
-        {
-           this.style.left = event.clientX - this.width / 2  + "px";
-           this.style.top = event.clientY - this.width / 2 + "px"
-        };
-
-        moveTarcza.onmouseup = function()
-        {
-            this.onmouseup = null
-        };
-        
-        moveTarcza.ondragstart = function(e)
-        {
-            e.preventDefault()
-        }
+    moveTarcza.onmouseup = (e) => e.onmouseup = null
+    moveTarcza.ondragstart = (e) => {
+        e.preventDefault()
+    }
 
 }

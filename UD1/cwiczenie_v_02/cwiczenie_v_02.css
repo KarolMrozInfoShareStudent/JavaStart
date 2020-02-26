@@ -1,12 +1,4 @@
 img{
     width: 200px;
-    -webkit-transition:all 50s;;
-    transition: all 50s;
-    position: absolute
-    
-}
-
-img:hover{
-    -webkit-transform: rotate(280deg);
-    transform: rotate(280deg);
+    position: absolute;
 }
