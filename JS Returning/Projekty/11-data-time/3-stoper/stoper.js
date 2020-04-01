@@ -1,6 +1,6 @@
 const btnTime = document.querySelector('.main');
-const btnreset = document.querySelector('reset')
-const result = document.querySelector('.time div')
+const btnReset = document.querySelector('.reset');
+const result = document.querySelector('.time div');
 
 let time = 0;
 let active = false;
@@ -11,11 +11,11 @@ const stoper = () => {
     if (!active) {
         active = !active;
         btnTime.textContent = 'Pauza';
-        idI = setInterval(start ,10) //przypisanie do zmiennej Id funkcji setInterval
+        idI = setInterval(start, 10) //przypisanie do zmiennej Id funkcji setInterval
     } else {
-        active = !active
+        active = !active;
         btnTime.textContent = 'Start';
-        clearInterval(idI)
+        clearInterval(idI);
     }
     console.log(active)
 }
@@ -25,6 +25,16 @@ const start = () => {
     result.textContent = (time / 100).toFixed(2)
 }
 
+const reset = () => {
+    time = 0;
+    active = false;
+    result.textContent = '-----';
+    btnTime.textContent = 'Start';
+    clearInterval(idI);
+
+
+}
+
 
 btnTime.addEventListener('click', stoper);
-btn.result.addEventListener('click', reset)
+btnReset.addEventListener('click', reset);
