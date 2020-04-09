@@ -17,5 +17,10 @@ const double = arr.map(number => number * 2);
 console.log(double);
 
 const people = arr.map(number => number + ' osób');
-console.log(people)
+console.log(people);
 
+
+// forEach
+
+arr.forEach((number, index) => arr[index] = number * 2);
+console.log('forEach ' + arr);
