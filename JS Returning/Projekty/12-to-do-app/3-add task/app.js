@@ -4,6 +4,12 @@ const taskNumber = document.querySelector('h1 span');
 const listItem = document.getElementsByClassName('task');
 const input = document.querySelector('input')
 
+const removeTask = (e) => {
+    e.target.parentNode.remove();
+    taskNumber.textContent = listItem.length;
+}
+
+
 const addTask = (e) => {
     e.preventDefault();
     const titleTask = input.value;
@@ -18,9 +24,8 @@ const addTask = (e) => {
 
     // const listItem = document.querySelectorAll('li.task').length;
     taskNumber.textContent = listItem.length;
-
+    task.querySelector('button').addEventListener('click', removeTask)
 
 }
-
 
 form.addEventListener('submit', addTask)
