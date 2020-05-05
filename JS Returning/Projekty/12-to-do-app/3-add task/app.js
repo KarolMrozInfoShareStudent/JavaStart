@@ -1,7 +1,7 @@
 const form = document.querySelector('form');
 const ul = document.querySelector('ul');
 const taskNumber = document.querySelector('h1 span');
-const listItem = document.querySelectorAll('li.task');
+const listItem = document.getElementsByClassName('task');
 const input = document.querySelector('input')
 
 const addTask = (e) => {
@@ -15,7 +15,9 @@ const addTask = (e) => {
     task.innerHTML = titleTask + '<button>Delate</button>';
     ul.appendChild(task);
     input.value = '';
-    ;
+
+    // const listItem = document.querySelectorAll('li.task').length;
+    taskNumber.textContent = listItem.length;
 
 
 }
