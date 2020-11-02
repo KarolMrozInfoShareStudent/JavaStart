@@ -12,6 +12,21 @@ const addElement = (e, node, txt, attr, value) => {
   }
 };
 
+const searchElements = (e, nameElemnet) => {
+  e.preventDefault();
+  console.log(nameElemnet);
+  const infoELemnt = document.querySelector(".result");
+  const elements = document.querySelectorAll(nameElemnet);
+  if (elements.length) {
+    infoELemnt.innerHTML = `<p class='result_info'> W tym elemencie mamy ${elements.length} elementów ${nameElemnet}`;
+  } else {
+    infoELemnt.innerHTML = `<p class='result_info'> Nie znaleziono elementów o nazwie ${nameElemnet}`;
+    return;
+  }
+};
+
+//nasluchiwanie
+
 const addForm = document.querySelector(".form--add");
 addForm.addEventListener("submit", (e) =>
   addElement(
@@ -21,4 +36,9 @@ addForm.addEventListener("submit", (e) =>
     addForm.elements.attr.value,
     addForm.elements.value.value
   )
+);
+
+const searchForm = document.querySelector(".form--search");
+searchForm.addEventListener("submit", (e) =>
+  searchElements(e, searchForm.elements["searching-element"].value)
 );
