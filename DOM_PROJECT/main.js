@@ -15,7 +15,7 @@ const addElement = (e, node, txt, attr, value) => {
 const searchElements = (e, nameElemnet) => {
   e.preventDefault();
   const infoELemnt = document.querySelector(".result");
-  infoELemnt.textContent = ''
+  infoELemnt.textContent = "";
   const elements = document.querySelectorAll(nameElemnet);
   // console.log([...elements]);
   if (elements.length) {
@@ -29,18 +29,18 @@ const searchElements = (e, nameElemnet) => {
 
 const showInfo = (elements, infoELemnt) => {
   console.log(elements, infoELemnt);
-  elements.forEach(elment =>{
-    const item = document.createElement('div');
-    item.className = 'element-info';
+  elements.forEach((elment) => {
+    const item = document.createElement("div");
+    item.className = "element-info";
     item.innerHTML = `
     <div>${elment.nodeName}</div>
     <div>klasa/klasy: ${elment.className}</div>
     <div>Szerokość elementu: ${elment.offsetWidth}</div>
     <div>Wysokość elementu: ${elment.offsetHeight}</div>
     <div>Liczba elementów dzieci: ${elment.childElementCount}</div>
-    `
-    infoELemnt.appendChild(item)
-  })
+    `;
+    infoELemnt.appendChild(item);
+  });
 };
 
 //nasluchiwanie
