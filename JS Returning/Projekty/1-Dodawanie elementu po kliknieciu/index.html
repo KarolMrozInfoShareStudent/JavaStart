@@ -9,10 +9,15 @@
     <style>
         button {
             display: block;
-            margin: 10px auto;
+            margin: 20px auto;
         }
 
-        div {
+        .box-number {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .box {
             background-color: black;
             width: 80px;
             height: 80px;
@@ -29,33 +34,64 @@
             color: black;
             border: 2px solid black;
         }
+
+        .button2 {
+            display: none;
+        }
     </style>
 </head>
 
 <body>
     <button>KLIKNIJ</button>
+    <button class="button2">USUŃ BOX</button>
+    <div class="box-number"></div>
 
     <script>
         //pobranie zawartości przycisku
-        const btn = document.querySelector('button')
+        const btn = document.querySelector('button');
+        const btn2 = document.querySelector('.button2');
+        const conteiner = document.querySelector('.box-number');
         let number = 1;
-        activeNumber = 1
+        activeNumber = 1;
         const addElement = () => {
             //nowy div
             const newDiv = document.createElement('div');
+
+            newDiv.classList.add('box')
             newDiv.textContent = number;
             //jezeli numer diva jest podzielny przez 5 to dodaja clase circle
-            if (activeNumber === 5) {
+            if (activeNumber % 5 === 0) {
                 activeNumber = 0
                 newDiv.classList.add('circle')
             }
-            //przypiecie nowego diva do body
-            document.body.appendChild(newDiv);
+            //przypiecie nowego diva do diva o clasie box-number
+            conteiner.appendChild(newDiv);
             number++
             activeNumber++
+            btn2.setAttribute("style", "display: block;");
+            return number
         }
+
+
+        const removeElement = () => {
+            const cuttent = conteiner.children.length
+
+            conteiner.removeChild(conteiner.lastChild)
+            number--
+            activeNumber--
+
+            if(cuttent === 1){
+                btn2.setAttribute("style", "display: none;");
+                return
+            }
+            console.log(cuttent)
+
+        }
+
         //ustawienie przycisku na zdarzenie click i funkcę addElement
-        btn.addEventListener('click', addElement)
+        btn.addEventListener('click', addElement);
+        //ustawienie przycisku na zdarzenie click i funkcę removeELment
+        btn2.addEventListener('click', removeElement)
     </script>
 </body>
 
